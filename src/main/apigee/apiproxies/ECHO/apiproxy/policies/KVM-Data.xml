@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations async="false" continueOnError="false" enabled="true" name="KVM-Data" mapIdentifier="ECHO-KVM">
+    <DisplayName>KVM-Data</DisplayName>
+    <ExpiryTimeInSecs>300</ExpiryTimeInSecs>
+    
+    <Get assignTo="KVM-Data.clientId" index="1">
+        <Key>
+            <Parameter>clientId</Parameter>
+        </Key>
+    </Get>
+    
+    <Get assignTo="KVM-Data.whitelistedPhoneNumbers" index="1">
+        <Key>
+            <Parameter>whitelistedPhoneNumbers</Parameter>
+        </Key>
+    </Get>
+    
+    <Scope>environment</Scope>
+</KeyValueMapOperations>

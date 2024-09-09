@@ -1,0 +1,37 @@
+<ProxyEndpoint name="default">
+  <FaultRules />
+  <PreFlow name="PreFlow">
+    <Description>Description</Description>
+  </PreFlow>
+  <Flows>
+    <Flow name="map-data">
+      <Description>Description</Description>
+      <!-- <Condition>(proxy.pathsuffix MatchesPath "/echo") and (request.verb = "GET")</Condition> -->
+      <Request>
+        <Step>
+          <Name>KVM-Data</Name>
+        </Step>
+        <Step>
+           <Name>JS-WhitelistedPhoneNumberCheck</Name>
+        </Step>
+      </Request>
+      <Response>
+        <Step>
+          <Name>AM-Debug</Name>
+        </Step>
+      </Response>
+    </Flow>
+  </Flows>
+  <PostFlow>
+    <Description>Description</Description>
+    <Response>
+      <Step>
+        <Name>XTJ</Name>
+      </Step>
+    </Response>
+  </PostFlow>
+  <HTTPProxyConnection>
+    <BasePath>/echo</BasePath>
+  </HTTPProxyConnection>
+  <RouteRule name="echo" />
+</ProxyEndpoint>

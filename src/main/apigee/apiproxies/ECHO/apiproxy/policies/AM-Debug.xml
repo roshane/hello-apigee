@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-Debug">
+    <DisplayName>AM-Debug</DisplayName>
+    <Set>
+        <Payload contentType="application/xml">
+            <response>
+                <clientId>{KVM-Data.clientId}</clientId>
+                <messageId>{createUuid()}</messageId>
+                <whitelistedPhoneNumbers>{KVM-Data.whitelistedPhoneNumbers}</whitelistedPhoneNumbers>
+                <isPhoneNumberWhitelisted>{JS-WhitelistedPhoneNumberCheck.isPhoneNumberWhitelisted}</isPhoneNumberWhitelisted>
+                <requestPhoneNumber>{request.queryparam.phoneNumber.1}</requestPhoneNumber>
+            </response>
+        </Payload>
+    </Set>
+    <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request" />
+</AssignMessage>

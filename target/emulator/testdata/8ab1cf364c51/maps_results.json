@@ -1,0 +1,16 @@
+[
+  {
+    "name": "ECHO-KVM",
+    "encrypted": false,
+    "entriesList": [
+      {
+        "name": "clientId"
+      }
+    ],
+    "nameEntryMap": {
+      "clientId": {
+        "name": "clientId"
+      }
+    }
+  }
+]
